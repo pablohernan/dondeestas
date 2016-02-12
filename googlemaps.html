@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<style>
+body, html {
+    height: 100%;
+}
+
+#map_wrapper, #map_canvas {
+    height: 100%;
+}
+</style>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="mapa.js"></script>
+<script>
+
+var mapa = new Mapa();
+jQuery(function($) {	
+    mapa.loadApi( '51.503654','-0.119562' );
+});
+
+/* tiene que existir esta funcion , es llamada por la Api de Google Maps cuando carga */
+function init(){ // llamada por la Api
+	mapa.init();
+}
+
+</script>
+
+
+
+<body>
+
+<div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
+
+<button onclick="change()">change()</button>
+<button onclick="mapa.addMaker( '51.503654','-0.119562' , 'Pablo' )">addMaker()</button>
+
+
+</body>
+</html>
