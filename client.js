@@ -16,7 +16,7 @@ var Client;
     //this.connect();
     //console.log("Client started");
   };
-}());
+}()); 
 
 /* Nome */
 Client.prototype.setName = function( name ) {
