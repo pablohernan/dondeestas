@@ -18,7 +18,7 @@ var Mapa;
       return instance;
     }
 
-    // Set the instance variable and return it onwards
+    // Set the instance variable and return it onwards 
     instance = this;
 	
   };
