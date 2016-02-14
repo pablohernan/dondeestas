@@ -2,7 +2,7 @@
 Google Maps utils
 
 Pablo Rapetti 
-07/02/2016
+07/02/2016 
 
 Example:
 http://wrightshq.com/playground/placing-multiple-markers-on-a-google-map-using-api-3/
