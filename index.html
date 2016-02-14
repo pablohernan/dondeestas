@@ -5,6 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="login/login.js"></script>
+    <script src="geolocation.js"></script>
     <script src="client.js"></script>
     <script src="config.js"></script>
     
@@ -89,6 +90,7 @@ body, html {
     
 		var mapa = new Mapa();
 		var client = new Client();
+		var geo = new Geo();
     	function enviar(){
     		var nombre = document.getElementById('nombre').value;
     		var div_usuario = document.getElementById('usuario');
@@ -105,10 +107,21 @@ body, html {
     		client.connect();
 			
     	}
-		/* tiene que existir esta funcion , es llamada por la Api de Google Maps cuando carga */
-		function init(){ // llamada por la Api
+		
+		/* todo assinc */
+		function init(){
+			initLocation();
+		}
+		function initLocation(){
+			geo.getLocation( returnLocation );
+		}
+		function returnLocation( position ){
+			mapa.loadApi( position.coords.latitude , position.coords.longitude , 'initMapa' );
+		}
+		function initMapa(){ // llamada por la Api
 			mapa.init();
-		}				
+		}
+		/* todo assinc */				
 		
     /*	
       window.onload = function() {

@@ -170,14 +170,13 @@ Client.prototype.heartbeat = function (self) {
   	if(self.latitud && self.longitud){
   		self.pingtime = Date.now();
 
-		/* cargo el mapa en la posicion que se encuentra el cliente */
+		/* cargo el mapa en la posicion que se encuentra el cliente 
 		if( ! self.loaded ){
 			console.log(self.latitud);
-			/* mapa */
 			mapa.loadApi( self.latitud , self.longitud );
 			self.loaded = true;
 		}
-  		
+  		*/
 		/* envia */
   		self.socket.emit('setCliente', {
   				pingtime: self.pingtime, 

@@ -25,13 +25,13 @@ var Mapa;
 }());
 
 /* Carga la Api */
-Mapa.prototype.loadApi = function( latitud , longitud ){
+Mapa.prototype.loadApi = function( latitud , longitud , fnstring ){
 	/* seto los valores para el init */
 	this.lugarLatitud = latitud;
 	this.lugarLongitud = longitud;	
 	
     var script = document.createElement('script');
-    script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCXGYrhU1bkONC6gli3F9vLVwMTrTNnx-I&callback=init"; // llama init
+    script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCXGYrhU1bkONC6gli3F9vLVwMTrTNnx-I&callback="+fnstring; // llama init
     document.body.appendChild(script);
 	
 }
