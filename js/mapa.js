@@ -30,9 +30,9 @@ Mapa.prototype.loadApi = function( latitud , longitud , fnstring ){
 	this.lugarLatitud = latitud;
 	this.lugarLongitud = longitud;	
 	
-    var script = document.createElement('script');
-    script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCXGYrhU1bkONC6gli3F9vLVwMTrTNnx-I&callback="+fnstring; // llama init
-    document.body.appendChild(script);
+   // var script = document.createElement('script');
+   // script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCXGYrhU1bkONC6gli3F9vLVwMTrTNnx-I&callback="+fnstring; // llama init
+   // document.body.appendChild(script);
 	
 }
 
